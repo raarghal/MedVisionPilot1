@@ -30,5 +30,5 @@ while 1:
 
     if (iter%300 == 0):
         cp = cmd.run("git add .", check=True, shell=True)
-        cp = cmd.run("git commit -m " + time.ctime(), check=True, shell=True)
+        cp = cmd.run("git commit -m \"" + time.ctime() + "\"", check=True, shell=True)
         cp = cmd.run("git push -u origin master", check=True, shell=True)
