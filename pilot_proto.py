@@ -9,11 +9,11 @@ import os
 ser = serial.Serial(port = '/dev/ttyUSB0', baudrate = 9600, parity = serial.PARITY_NONE, stopbits = serial.STOPBITS_ONE, bytesize = serial.EIGHTBITS, timeout = 1)
 iter = 0
 
-masterlog = open('master.csv', 'w')
+masterlog = open('inventory_log.csv', 'w')
 mw = csv.writer(masterlog)
 weight = -1
 prev_weight = -1
-UNIT_WEIGHT = 0.1
+UNIT_WEIGHT = 0.033
 
 while 1:
     prev_weight = weight
